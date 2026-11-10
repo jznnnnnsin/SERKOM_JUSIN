@@ -88,7 +88,7 @@
                 <p>
                     Telepon: +6208 xxxx xxxx | Instagram: @kopiuleekareng
                 </p>
-
+            </div>
         </section>
     </main>
 
@@ -96,7 +96,7 @@
         <div class="container">
             <p>&copy; {{ date('Y') }} Kopi Ulee Kareng. </p>
         </div>
-
     </footer>
+@endsection
 
 

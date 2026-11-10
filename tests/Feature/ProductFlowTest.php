@@ -1,8 +1,7 @@
 <?php
 
 namespace Tests\Feature;
-
-use App\Models\Product;
+use App\Models\Produk;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -29,7 +28,7 @@ class ProductFlowTest extends TestCase
 
         $response->assertRedirect(route('produk.index'));
 
-        $this->assertDatabaseHas('products', [
+        $this->assertDatabaseHas('produks', [
             'nama_produk' => 'Kopi Test',
             'harga' => 20000,
         ]);
@@ -44,6 +43,7 @@ class ProductFlowTest extends TestCase
         ]);
 
         $response->assertSessionHasErrors(['harga']);
-        $this->assertDatabaseCount('products', 0);
+
+        $this->assertDatabaseCount('produks', 0);
     }
 }
